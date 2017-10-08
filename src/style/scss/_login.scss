@@ -1,0 +1,23 @@
+.g-login{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.g-login-pane{
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  width: 100%;
+  height: 100px;
+
+  text-align: center;
+}
+
+.g-login-pane h1{
+  display: inline-block;
+  margin-left: -20px;
+  padding: 0 20px;
+  height: 50px;
+  line-height: 50px;
+}
