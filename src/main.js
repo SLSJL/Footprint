@@ -5,8 +5,12 @@ import iView from 'iview'
 import App from './App'
 import router from './router'
 import VueRouter from 'vue-router'
-
 import 'iview/dist/styles/iview.css'
+import echarts from 'echarts'
+
+import Icon from 'vue-svg-icon/Icon.vue'
+Vue.component('icon', Icon)
+Vue.prototype.$echarts = echarts
 
 Vue.config.productionTip = false
 

@@ -1,12 +1,12 @@
 <template>
   <div class="">
-   footPrint
+   publish
   </div>
 </template>
 
 <script>
   export default {
-    name: 'footPrint',
+    name: 'publish',
     data () {
       return {
       }

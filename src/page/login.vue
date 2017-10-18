@@ -1,10 +1,14 @@
 <template>
   <div class="g-login">
     <div class="g-login-pane">
-      <h1>足记</h1>
-      <Input v-model="username" icon="person" placeholder="请输入..." style="width: 200px"></Input>
-      <Input v-model="password" icon="locked" placeholder="请输入..." style="width: 200px"></Input>
-      <Button type="primary" @click="login">登录</Button>
+      <Tabs value="name1">
+        <TabPane :label="label" name="name1">
+          <Input v-model="username" @keyup.native="login($event)" size="large" icon="person" placeholder="请输入..." type="text" class="u-login-input"></Input>
+          <Input v-model="password" @keyup.native="login($event)" size="large" icon="locked" placeholder="请输入..." type="password"  class="u-login-input"></Input>
+          <Button type="primary" class="u-login-input" @click="login($event)" >登录</Button>
+        </TabPane>
+        <TabPane label="注册" name="name2">注册</TabPane>
+      </Tabs>
     </div>
   </div>
 </template>
@@ -15,14 +19,24 @@
     data () {
       return {
         username: '',
-        password: ''
+        password: '',
+        label: (h) => {
+          return h('div', [
+            h('span', '登录')
+          ])
+        }
       }
     },
     methods: {
-      login: function () {
-        console.log(this.username)
-        if (this.username === 'u' && this.password === '123') {
-          this.$router.push({name: 'home'})
+      login: function (evt) {
+        if (evt.type === 'keyup' && evt.keyCode === 13) {
+          if (this.username === 'user' && this.password === '123') {
+            this.$router.push({name: 'foot'})
+          } else {
+            alert('账号错误')
+          }
+        } else if (evt.type === 'click') {
+          this.$router.push({name: 'foot'})
         }
       }
     }

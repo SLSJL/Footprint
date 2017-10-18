@@ -1,10 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '@/page/login'
-import Home from '@/page/home/home'
-import FootPrint from '@/page/home/footPrint'
-import Stats from '@/page/home/stats'
-import User from '@/page/home/user'
+import Footprint from '@/page/footprint'
+import Foot from '@/page/footprint/foot'
+import Routes from '@/page/footprint/routes'
+import Online from '@/page/stats/Online'
+import Publish from '@/page/stats/Publish'
+import Visit from '@/page/stats/Visit'
+import Register from '@/page/stats/register'
+import Share from '@/page/stats/Share'
+import User from '@/page/system/user'
+import Log from '@/page/system/Log'
 
 Vue.use(Router)
 
@@ -16,24 +22,54 @@ export default new Router({
       component: Login
     },
     {
-      name: 'home',
-      path: '/home',
-      component: Home,
+      name: 'footprint',
+      path: '/footprint',
+      component: Footprint,
       children: [
         {
-          name: 'footPrint',
-          path: '/home/footprint',
-          component: FootPrint
+          name: 'foot',
+          path: '/footprint/foot',
+          component: Foot
         },
         {
-          name: 'stats',
-          path: '/home/stats',
-          component: Stats
+          name: 'routes',
+          path: '/footprint/routes',
+          component: Routes
+        },
+        {
+          name: 'online',
+          path: '/footprint/online',
+          component: Online
+        },
+        {
+          name: 'publish',
+          path: '/footprint/publish',
+          component: Publish
+        },
+        {
+          name: 'visit',
+          path: '/footprint/visit',
+          component: Visit
+        },
+        {
+          name: 'register',
+          path: '/footprint/register',
+          component: Register
+        },
+        {
+          name: 'share',
+          path: '/footprint/share',
+          component: Share
         },
         {
           name: 'user',
-          path: '/home/user',
+          path: '/footprint/user',
           component: User
+        },
+        {
+          name: 'log',
+          path: '/footprint/log',
+          component: Log
         }
       ]
     }

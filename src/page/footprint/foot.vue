@@ -1,12 +1,12 @@
 <template>
   <div class="">
-   stats
+   foot
   </div>
 </template>
 
 <script>
   export default {
-    name: 'stats',
+    name: 'footPrint',
     data () {
       return {
       }

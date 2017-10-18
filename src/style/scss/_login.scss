@@ -6,12 +6,19 @@
 
 .g-login-pane{
   position: absolute;
+  left: 50%;
   top: 50%;
-  margin-top: -25px;
-  width: 100%;
-  height: 100px;
+  padding: 20px;
+  margin-left: -200px;
+  margin-top: -150px;
+  width: 400px;
+  height: 300px;
 
   text-align: center;
+  border: 1px solid #eee;
+  border-radius: 6px;
+
+  background-color: #fff;
 }
 
 .g-login-pane h1{
@@ -21,3 +28,24 @@
   height: 50px;
   line-height: 50px;
 }
+
+.u-login-input{
+  margin: 15px auto;
+  width: 240px !important;
+  display: block;
+}
+
+
+.ivu-tabs-nav-scroll{
+  text-align: center;
+}
+
+.ivu-tabs-nav{
+  display: inline-block;
+  float: none;
+}
+
+.ivu-tabs-tab{
+  font-size: 18px;
+}
+

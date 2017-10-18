@@ -1,9 +1,26 @@
 .layout{
+  height: 100%;
   border: 1px solid #d7dde4;
   background: #f5f7f9;
+}
+.layout-logo{
+  width: 100px;
+  height: 30px;
+  background: #5b6270;
+  border-radius: 3px;
+  float: left;
   position: relative;
-height: 100%;
-  overflow: hidden;
+  top: 15px;
+  left: 20px;
+}
+.layout-nav{
+  width: 420px;
+  margin: 0 auto;
+}
+.layout-assistant{
+  width: 300px;
+  margin: 0 auto;
+  height: inherit;
 }
 .layout-breadcrumb{
   padding: 10px 15px 0;
@@ -23,46 +40,71 @@ height: 100%;
   padding: 10px 0 20px;
   color: #9ea7b4;
 }
-.layout-menu-left{
+
+.layout-row,
+.layout-menu-left,
+.layout-menu-left ul
+{
   height: 100%;
-  background: #fff;
-}
-.layout-header{
-  height: 60px;
-  background: #fff;
-  box-shadow: 0 1px 1px rgba(0,0,0,.1);
-}
-.layout-logo-left{
-  width: 90%;
-  height: 60px;
-  background: #5b6270;
-  border-radius: 3px;
-  margin: 15px auto;
 }
 
-.layout-logo-left h1{
-  color: #fff;
+.ivu-menu-submenu-title{
+  //font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 16px !important;
+}
+
+.ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu){
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #2d8cf0;
+  border-right: 4px solid #2d8cf0;
+  z-index: 2;
+}
+
+.ivu-menu a{
+  color: #80848f;
+}
+
+
+.layout-logo-left{
   height: 60px;
-  line-height: 60px;
+  background-color: #495060;
   text-align: center;
 }
 
-.layout-ceiling-main a{
-  color: #9ba7b5;
+.layout-logo-left h1{
+  float: left;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+
+  color: #fff;
 }
 
-.layout-hide-text .layout-text{
-  display: none;
+.layout-logo-left .sys-icon{
+  float: left;
+  margin-left: 36px;
+  margin-right: 16px;
+  width: 36px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./../static/images/footprint_icon.png");;
 }
 
-.ivu-col{
-  transition: width .2s ease-in-out;
+
+.layout-user-info{
+  height: 60px;
+  line-height: 60px;
+  float: right;
+  color: #fff;
 }
 
-.ivu-row-flex{
-  height: 100%;
-}
 
-.ivu-icon{
-  margin-left: 6px;
+.layout-header{
+  height: 60px;
+  background-color: #495060;
 }
