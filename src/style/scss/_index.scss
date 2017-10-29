@@ -6,11 +6,21 @@
   width: 100%;
   height: 100%;
 
-  background-color: gray;
+  //background-color: gray;
   background-image: url("./../static/images/login_bg.jpg");
   background-size: 100%;
 
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+
+.g-container{
+  width: 100%;
+  height: 100%;
+}
+
+#footKey{
+  width: 100%;
 }

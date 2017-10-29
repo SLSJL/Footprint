@@ -1,12 +1,10 @@
 <template>
-
-  <div class="layout" :class="{'layout-hide-text': spanLeft < 5}">
+  <div class="layout" :style="layoutStyle" :class="{'layout-hide-text': spanLeft < 5}">
     <Row class="layout-row layout-header">
       <Col :span="spanLeft" class="layout-menu-left" type="flex">
         <div class="layout-logo-left">
           <div class="sys-icon"></div>
-          <h1>
-            足记</h1>
+          <h1>足记</h1>
         </div>
       </Col>
       <Col :span="spanRight">
@@ -46,7 +44,11 @@
           </router-link>
         </Submenu>
 
-        <Submenu name="2">
+        <router-link :to="{ name: 'online'}">
+          <MenuItem class="ivu-menu-submenu-title" name="2"><Icon type="stats-bars"></Icon>在线统计</MenuItem>
+        </router-link>
+
+        <!--<Submenu name="2">
           <template slot="title">
             <Icon type="stats-bars"></Icon>
             统计分析
@@ -71,7 +73,7 @@
           <router-link :to="{ name: 'routes'}">
             <MenuItem name="2-5">分享统计</MenuItem>
           </router-link>
-        </Submenu>
+        </Submenu>-->
 
 
         <Submenu name="3">
@@ -94,9 +96,6 @@
       <div class="layout-content">
         <router-view></router-view>
       </div>
-      <div class="layout-copy">
-        2011-2016 &copy; TalkingData
-      </div>
       </Col>
     </Row>
   </div>
@@ -108,11 +107,17 @@
     data () {
       return {
         spanLeft: 3,
-        spanRight: 21
+        spanRight: 21,
+        layoutStyle: {
+          height: 0
+        }
       }
     },
     created () {
-      this.$router.push({name: 'footprint'})
+      this.$router.push({name: 'foot'})
+    },
+    mounted () {
+      this.layoutStyle.height = document.getElementById('app').offsetHeight - 60 + 'px'
     },
     computed: {
       iconSize () {
